@@ -1,0 +1,9 @@
+@import "helpers/_mixins.scss";
+@import "helpers/_fonts.scss";
+@import "helpers/_variables.scss";
+
+h1 {
+  color: red;
+  margin-bottom: 10px;
+  font-family: $font_futura-light;
+}

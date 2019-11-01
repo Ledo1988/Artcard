@@ -1,0 +1,6 @@
+mixin user_avatar(avatar_url, profile_url, name)
+	.user(class='4u 6u(small) 12u(xsmall)')
+		a(href=profile_url)
+			.user-avatar-thumbnail.is-active(style="background-image: url('" + avatar_url + "')")
+			if name
+				span.user-name=name
