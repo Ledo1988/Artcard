@@ -1,6 +1,61 @@
-mixin user_avatar(avatar_url, profile_url, name)
-	.user(class='4u 6u(small) 12u(xsmall)')
-		a(href=profile_url)
-			.user-avatar-thumbnail.is-active(style="background-image: url('" + avatar_url + "')")
-			if name
-				span.user-name=name
+mixin img(src, width, height, title)
+	//- attributes == {class: "btn"}
+	img(src=src width=width height=height title=title)
+
+mixin link-with-img (href, className, src, width, height, title)
+	a(href=href class=className)
+		img(src=src width=width height=height title=title)
+
+mixin link(href, className, name)
+	a(class=className href=href)=name
+
+mixin link-with-span(href, className, name)
+	a(class=className href=href)
+		span=name
+
+mixin list-item(name, href, title)
+	li
+		a(href=href title=title)=name
+
+mixin input(idName, value, type, name, required, placeholder, readonly)
+	.label-content
+		label(for=idName)
+			input(id=idName value=value type=type name=name required=required placeholder=placeholder readonly=readonly)
+
+mixin input__checkbox(idName, name, value, Title)
+	.checkbox-wrapper
+		input(type="checkbox" id=idName name=name value=value)
+		label(for=idName)
+			span=Title
+
+mixin input__radio(idName, name, value, Title, checked)
+	.radio-wrapper
+		input(type="radio" id=idName name=name value=value checked=checked)
+		label(for=idName)
+			span=Title
+
+mixin toggle(idName, Title, checked)
+	.toggle-btn
+		input(type="checkbox"  id=idName checked=checked class="cb-value")
+		label(for=idName)
+			span=Title
+
+mixin dropdown-option (Title, idName, value)
+	li
+		.dropdown__option
+			.title=Title
+			.counter
+				span.noselect.counter__btn.minus -
+				.noselect.counter-quantity
+					input(type="number" id=idName name="quantity" value=value)
+					label(for=idName)
+						span=value
+				span.noselect.counter__btn.plus +
+
+mixin img-with-text (className, src, width, height, title, Title, Desc)
+	.img-with-text(class=className)
+		.img-wrapper
+			img(src=src width=width height=height title=title)
+		.desc-wrapper
+			.title=Title
+			.desc=Desc

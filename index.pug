@@ -5,11 +5,42 @@ html
 	meta(name='viewport', content="initial-scale=1.0, width=device-width")
 	link(href='css/normalize.css' type='text/css' rel='stylesheet')
 	link(href='css/bootstrap/bootstrap.min.css' type='text/css' rel='stylesheet')
+	link(href='css/swiper/swiper.min.css' type='text/css' rel='stylesheet')
 	link(href='css/style.css' type='text/css' rel='stylesheet')
 	script(src='js/bootstrap/bootstrap.min.js')
+	script(src='js/swiper/swiper.min.js')
 	script(src='js/script.js')
 	include mixin.pug
-	title Artdesi
+	title Арт-карта
 	body
-		h1 tes
-		+user_avatar('', '#', 'Daniel')
+		header
+			.container-fluid
+				.container
+					.header-main
+						.header-main-logo
+							+link-with-img ('/', '', 'images/img_logo.png', '285', '55', 'Банк Таврический')
+						h1 Арт-карта
+						.header-main-contacts
+							+link('tel:8 (800) 775 5712', 'tel-link', '8 (800) 775 5712')
+							.lk-wrapper
+								span Личный кабинет:&nbsp;
+								+link('/', 'lk-link', 'Войти')
+
+					nav
+						ul.header-nav
+							+list-item('О карте', 'javascript:void(0);', 'О карте')
+							+list-item('Искусство', 'javascript:void(0);', 'Искусство')
+							+list-item('Активити', 'javascript:void(0);', 'Активити')
+							+list-item('Программы и условия', 'javascript:void(0);', 'Программы и условия')
+							+list-item('Заказать карту', 'javascript:void(0);', 'Заказать карту')
+		main
+			.container-fluid
+				.container
+					.main-slider
+						.swiper-container(class='main-swiper')
+							.swiper-wrapper
+								.swiper-slide Slide 1
+
+
+
+

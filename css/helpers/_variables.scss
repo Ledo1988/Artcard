@@ -1,12 +1,10 @@
 //Colors
-$color_dark-shade-100: #1F2041;
-$color_dark-shade-75:  rgba(31, 32, 65, 0.75);
-$color_dark-shade-50:  rgba(31, 32, 65, 0.5);
-$color_dark-shade-25:  rgba(31, 32, 65, 0.25);
-$color_dark-shade-5:   rgba(31, 32, 65, 0.05);
-$color_purple:         #BC9CFF;
-$color_green:          #6FCF97;
-$color_white:          #ffffff;
+$color_black-pale: #272525;
+$color_black-rich: #222221;
+$color_black:      #000000;
+$color_black-bg:   #140e0b;
+$color_white:      #ffffff;
+$color_grey:       #a7a7a7;
 
 //Fonts
 $font_segoe-bold:      "SegoeUI-Bold";
@@ -14,7 +12,7 @@ $font_segoe-semibold:  "SegoeUI-SemiBold";
 $font_segoe-regular:   "SegoeUI-Regular";
 $font_proxima-bold:    "ProximaNova-Bold";
 $font_futura-regular:  "FuturaFuturisC-Regular";
-$font_futura-light:    "FuturaFuturisC-Light";
+$font_futura-light:    "FuturaFuturis-Light";
 
 //Blocks
 $max-content:         1160px;
