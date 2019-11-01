@@ -7,6 +7,7 @@ html
 	link(href='css/bootstrap/bootstrap.min.css' type='text/css' rel='stylesheet')
 	link(href='css/swiper/swiper.min.css' type='text/css' rel='stylesheet')
 	link(href='css/style.css' type='text/css' rel='stylesheet')
+	script(src='js/jquery/jquery-3.4.1.min.js')
 	script(src='js/bootstrap/bootstrap.min.js')
 	script(src='js/swiper/swiper.min.js')
 	script(src='js/script.js')
@@ -16,31 +17,47 @@ html
 		header
 			.container-fluid
 				.container
-					.header-main
-						.header-main-logo
-							+link-with-img ('/', '', 'images/img_logo.png', '285', '55', 'Банк Таврический')
-						h1 Арт-карта
-						.header-main-contacts
-							+link('tel:8 (800) 775 5712', 'tel-link', '8 (800) 775 5712')
-							.lk-wrapper
-								span Личный кабинет:&nbsp;
-								+link('/', 'lk-link', 'Войти')
+					.header-wrapper
+						.header-main
+							.header-main-logo
+								+link-with-img ('/', '', 'images/img_logo.png', '285', '55', 'Банк Таврический')
+							h1 Арт-карта
+							.header-main-contacts
+								+link('tel:8 (800) 775 5712', 'tel-link', '8 (800) 775 5712')
+								.lk-wrapper
+									span Личный кабинет:&nbsp;
+									+link('/', 'lk-link', 'Войти')
 
-					nav
-						ul.header-nav
-							+list-item('О карте', 'javascript:void(0);', 'О карте')
-							+list-item('Искусство', 'javascript:void(0);', 'Искусство')
-							+list-item('Активити', 'javascript:void(0);', 'Активити')
-							+list-item('Программы и условия', 'javascript:void(0);', 'Программы и условия')
-							+list-item('Заказать карту', 'javascript:void(0);', 'Заказать карту')
+						nav
+							ul.header-nav
+								+list-item('О карте', 'javascript:void(0);')
+								+list-item('Искусство', 'javascript:void(0);')
+								+list-item('Активити', 'javascript:void(0);')
+								+list-item('Программы и условия', 'javascript:void(0);')
+								+list-item('Заказать карту', 'javascript:void(0);')
 		main
 			.container-fluid
 				.container
 					.main-slider
 						.swiper-container(class='main-swiper')
 							.swiper-wrapper
-								.swiper-slide Slide 1
+								.swiper-slide
+									img(src='images/img_slider-1.jpg', width='1366', height='640', alt='')
+								.swiper-slide
+									img(src='images/img_slider-2.jpg', width='1366', height='640', alt='')
 
-
-
-
+					.main-about-wrapper
+						h2 Art Card
+						.main-about
+							.main-about-img
+								img(src='images/img_card.jpg', width='412', height='260', alt='Арт Карта')
+							.main-about-desc
+								p.title
+									span.big 5%
+									|  cash back на все
+								p.main-idea
+									| Потрать на билеты  <br>в театры и музеи
+								p.desc
+									| К программе подключено более 50 музеев, 100 театров
+								.btn-wrapper
+									+link('javascript:void(0);', 'order-link btn', 'Заказать карту')

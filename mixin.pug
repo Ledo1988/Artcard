@@ -13,9 +13,9 @@ mixin link-with-span(href, className, name)
 	a(class=className href=href)
 		span=name
 
-mixin list-item(name, href, title)
+mixin list-item(name, href)
 	li
-		a(href=href title=title)=name
+		a(href=href)=name
 
 mixin input(idName, value, type, name, required, placeholder, readonly)
 	.label-content
