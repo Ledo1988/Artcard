@@ -58,7 +58,7 @@ ul {
   font-size: 20px;
   font-family: "SegoeUI-Bold";
   text-transform: uppercase;
-  padding: 15px 20px;
+  padding: 10px 25px;
   display: inline-block;
   background-color: #140e0b;
   border-radius: 0;
@@ -128,7 +128,7 @@ nav {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 50px;
-  margin-bottom: 60px; }
+  margin-bottom: 50px; }
   .main-about-wrapper h2 {
     font-size: 37px;
     color: #222221;
@@ -136,13 +136,17 @@ nav {
     margin-bottom: 70px;
     text-transform: uppercase; }
 
+.big {
+  font-size: 80px; }
+
 .main-about {
   max-width: 985px;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
   justify-content: center;
-  padding-left: 85px; }
+  padding-left: 85px;
+  padding-bottom: 75px; }
   .main-about .main-about-desc .title {
     font-family: "FuturaFuturisC-Regular";
     color: #222221;
@@ -150,8 +154,6 @@ nav {
     line-height: 115%;
     margin-bottom: 20px;
     text-transform: uppercase; }
-    .main-about .main-about-desc .title .big {
-      font-size: 80px; }
   .main-about .main-about-desc .main-idea {
     font-size: 31px;
     font-family: "FuturaFuturis-Light";
@@ -162,7 +164,7 @@ nav {
     font-size: 16px;
     font-family: "SegoeUI-Regular";
     color: #000000;
-    margin-bottom: 25px; }
+    margin-bottom: 20px; }
   .main-about .main-about-img {
     margin-right: 100px;
     position: relative;
@@ -190,5 +192,67 @@ nav {
       border-radius: 5%;
       left: 10%;
       right: 10%; }
+
+.main-advantages-wrapper .main-advantages-heading {
+  margin-bottom: 45px;
+  text-align: center; }
+  .main-advantages-wrapper .main-advantages-heading h2 {
+    margin-bottom: 15px; }
+  .main-advantages-wrapper .main-advantages-heading .headline {
+    font-family: "FuturaFuturisC-Regular";
+    font-size: 35px;
+    color: #000000; }
+
+.main-advantages {
+  max-width: 985px;
+  margin: 0 auto;
+  padding-bottom: 20px; }
+  .main-advantages .main-advantages-items {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 55px; }
+    .main-advantages .main-advantages-items .main-advantages-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start; }
+      .main-advantages .main-advantages-items .main-advantages-item:first-of-type {
+        align-items: flex-start; }
+      .main-advantages .main-advantages-items .main-advantages-item .desc-wrapper p {
+        font-family: "SegoeUI-Regular";
+        font-size: 22px;
+        color: #272525;
+        margin-top: 40px;
+        max-width: 270px;
+        text-align: left; }
+  .main-advantages .main-advantages-list li {
+    font-family: "FuturaFuturisC-Regular";
+    font-size: 32px;
+    color: #000000;
+    margin-bottom: 35px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start; }
+    .main-advantages .main-advantages-list li p {
+      margin-bottom: 0; }
+    .main-advantages .main-advantages-list li .big {
+      font-size: 44px; }
+    .main-advantages .main-advantages-list li:before {
+      content: '';
+      display: inline-block;
+      margin-right: 60px;
+      width: 22px;
+      height: 44px;
+      border-left: solid 22px #56ffdb;
+      border-bottom: solid 22px transparent;
+      border-top: solid 22px transparent; }
+    .main-advantages .main-advantages-list li:nth-of-type(2):before {
+      border-left-color: #fff12c; }
+    .main-advantages .main-advantages-list li:nth-of-type(3):before {
+      border-left-color: #002b5f; }
 
 /*# sourceMappingURL=style.css.map */

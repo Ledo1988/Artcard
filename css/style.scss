@@ -52,7 +52,7 @@ ul {
   font-size: 20px;
   font-family: $font_segoe-bold;
   text-transform: uppercase;
-  padding: 15px 20px;
+  padding: 10px 25px;
   display: inline-block;
   background-color: $color_black-bg;
   border-radius: 0;
@@ -152,7 +152,7 @@ nav {
 .main-about-wrapper {
   @include background('../images/img_main-about-bg.png', center, no-repeat, cover);
   padding-top: 50px;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 
   h2{
     font-size: 37px;
@@ -163,6 +163,10 @@ nav {
   }
 }
 
+.big {
+  font-size: 80px;
+}
+
 .main-about {
   max-width: $max-content;
   margin: 0 auto;
@@ -170,6 +174,7 @@ nav {
   align-items: flex-start;
   justify-content: center;
   padding-left: 85px;
+  padding-bottom: 75px;
 
   .main-about-desc {
     .title {
@@ -180,9 +185,7 @@ nav {
       margin-bottom: 20px;
       text-transform: uppercase;
 
-      .big {
-        font-size: 80px;
-      }
+
     }
 
     .main-idea {
@@ -197,7 +200,7 @@ nav {
       font-size: 16px;
       font-family: $font_segoe-regular;
       color: $color_black;
-      margin-bottom: 25px;
+      margin-bottom: 20px;
     }
   }
 
@@ -232,6 +235,105 @@ nav {
       left: 10%;
       right: 10%;
     }
+  }
+}
+
+.main-advantages-wrapper {
+
+  .main-advantages-heading {
+    margin-bottom: 45px;
+    text-align: center;
+
+    h2 {
+      margin-bottom: 15px;
+    }
+
+    .headline {
+      font-family: $font_futura-regular;
+      font-size: 35px;
+      color: $color_black;
+    }
+  }
+}
+
+.main-advantages {
+  max-width: $max-content;
+  margin: 0 auto;
+  padding-bottom: 20px;
+
+  .main-advantages-items {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 55px;
+
+    .main-advantages-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      &:first-of-type {
+        align-items: flex-start;
+      }
+
+      .desc-wrapper p {
+        font-family: $font_segoe-regular;
+        font-size: 22px;
+        color: $color_black-pale;
+        margin-top: 40px;
+        max-width: 270px;
+        text-align: left;
+      }
+    }
+  }
+
+  .main-advantages-list {
+    li {
+      font-family: $font_futura-regular;
+      font-size: 32px;
+      color: $color_black;
+      margin-bottom: 35px;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+
+      p{
+        margin-bottom: 0;
+      }
+
+      .big {
+        font-size: 44px;
+      }
+
+      &:before {
+        content: '';
+        display: inline-block;
+        margin-right: 60px;
+        width: 22px;
+        height: 44px;
+        border-left: solid 22px #56ffdb;
+        border-bottom: solid 22px transparent;
+        border-top: solid 22px transparent;
+      }
+
+      &:nth-of-type(2):before {
+        border-left-color: #fff12c;
+      }
+
+      &:nth-of-type(3):before  {
+        border-left-color: #002b5f;
+      }
+
+
+    }
+
+
+
+
   }
 }
 
