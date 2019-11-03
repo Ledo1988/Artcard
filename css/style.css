@@ -244,7 +244,7 @@ nav {
     .main-advantages .main-advantages-list li:before {
       content: '';
       display: inline-block;
-      margin-right: 60px;
+      margin-right: 55px;
       width: 22px;
       height: 44px;
       border-left: solid 22px #56ffdb;
@@ -254,5 +254,53 @@ nav {
       border-left-color: #fff12c; }
     .main-advantages .main-advantages-list li:nth-of-type(3):before {
       border-left-color: #002b5f; }
+
+.main-mobile-wrapper {
+  padding: 70px 0 50px 0;
+  background-image: url("../images/img_mobile-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+.main-mobile {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  max-width: 985px;
+  margin: 0 auto; }
+  .main-mobile .img-wrapper {
+    margin-right: 85px;
+    margin-left: 55px;
+    flex-shrink: 0; }
+  .main-mobile .main-mobile-heading h2 {
+    margin-bottom: 30px; }
+  .main-mobile .main-mobile-heading .headline {
+    font-family: "FuturaFuturisC-Regular";
+    font-size: 63px;
+    color: #000000;
+    margin-bottom: 45px;
+    line-height: 90%; }
+  .main-mobile .desc p {
+    font-size: 31px;
+    font-family: "FuturaFuturis-Light";
+    max-width: 400px;
+    color: #222221; }
+
+.main-details {
+  color: #ffffff;
+  background-color: #140e0b; }
+  .main-details .main-details-tabs {
+    max-width: 1010px;
+    margin: 0 auto; }
+    .main-details .main-details-tabs .main-details-heading {
+      padding: 55px 0 60px 0;
+      text-align: center; }
+      .main-details .main-details-tabs .main-details-heading h2 {
+        color: #ffffff;
+        margin-bottom: 15px; }
+      .main-details .main-details-tabs .main-details-heading .headline {
+        font-family: "FuturaFuturisC-Regular";
+        font-size: 35px; }
 
 /*# sourceMappingURL=style.css.map */
