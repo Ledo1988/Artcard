@@ -212,3 +212,46 @@ html
 													p.desc
 														| Использование на возврат средств по операциям оплаты билетов в музеи и театры.
 														| Но не более 2 млн. руб. в год по всем картам банка.
+					.main-order-wrapper
+						.main-order-heading
+							h2 Получить карту
+							.headline Закажите карту, не выходя из дома
+						.main-order
+							.img-desc-wrapper
+								.img-wrapper
+									img(src='images/img_card.jpg', width='412', height='260', alt='Арт Карта')
+								.desc-wrapper
+									p.attention
+										span.big 5%
+										|  cash back на все
+									p.desc
+										| Потрать на билеты  <br>в театры и музеи
+							.main-order-form-wrapper
+		footer
+			.container-fluid
+				.container
+					.footer-wrapper
+						.footer-main
+							.footer-main-item.about
+								.footer-main-logo
+									+link-with-img ('/', '', 'images/img_logo-sm.png', '183', '35', 'Банк Таврический')
+								p.footer-main-license Таврический Банк (АО), Санкт-Петербург <br>Универсальная лицензия ЦБ РФ <br>№ 2304 от 27.06.2019 г.
+								.footer-tel-wrapper
+									.footer-tel-link
+										.title Бесплатный звонок по России
+										+link('tel:8 (800) 775 5712', 'tel-link', '8 (800) 775 5712')
+									.footer-tel-link
+										.title Телефон в Санкт-Петербурге
+										+link('tel:8 (812) 329-55-12', 'tel-link', '8 (812) 329-55-12')
+							.footer-main-item.applications
+								.footer-main-item-title Скачать приложение
+								.footer-main-applications
+									+link-with-img ('/', 'footer-main-application-link', 'images/ico_app-google.png', '164', '48', 'Банк Таврический - Google')
+									+link-with-img ('/', 'footer-main-application-link', 'images/ico_app-apple.png', '164', '48', 'Банк Таврический - AppStore')
+							.footer-main-item.about.social
+								.footer-main-item-title Узнать больше
+								.footer-main-social
+									+link-with-img ('/', 'footer-main-social-link', 'images/ico_social-vk.png', '46', '46', 'Банк Таврический - Vkontakte')
+									+link-with-img ('/', 'footer-main-social-link', 'images/ico_social-f.png', '46', '46', 'Банк Таврический - Facebook')
+						.footer-copyright
+							p © 2018 Таврический Банк (АО). Использование материалов запрещено без письменного одобрения администрации сайта

@@ -352,4 +352,46 @@ nav {
       font-family: "SegoeUI-Regular";
       font-size: 26px; }
 
+.main-order-wrapper {
+  padding: 55px 0; }
+  .main-order-wrapper .main-order-heading {
+    margin-bottom: 65px;
+    text-align: center; }
+    .main-order-wrapper .main-order-heading h2 {
+      margin-bottom: 20px; }
+    .main-order-wrapper .main-order-heading .headline {
+      font-family: "FuturaFuturisC-Regular";
+      font-size: 35px;
+      color: #000000; }
+
+.main-order {
+  max-width: 1010px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between; }
+  .main-order .img-desc-wrapper {
+    margin-right: 90px;
+    flex-shrink: 0; }
+    .main-order .img-desc-wrapper .img-wrapper {
+      margin-bottom: 55px; }
+    .main-order .img-desc-wrapper .desc-wrapper .attention {
+      font-family: "FuturaFuturisC-Regular";
+      font-size: 24px;
+      color: #000000;
+      margin-bottom: 25px;
+      text-transform: uppercase; }
+      .main-order .img-desc-wrapper .desc-wrapper .attention .big {
+        font-size: 31px; }
+    .main-order .img-desc-wrapper .desc-wrapper .desc {
+      font-size: 25px;
+      color: #000000;
+      line-height: 115%; }
+
+.footer-wrapper {
+  padding: 15px 55px 35px 55px;
+  background-color: #f1f1f1; }
+  .footer-wrapper .footer-main {
+    display: flex;
+    justify-content: space-between; }
+
 /*# sourceMappingURL=style.css.map */
