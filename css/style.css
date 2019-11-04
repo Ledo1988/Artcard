@@ -290,17 +290,66 @@ nav {
 .main-details {
   color: #ffffff;
   background-color: #140e0b; }
-  .main-details .main-details-tabs {
+  .main-details .main-details-desc {
     max-width: 1010px;
-    margin: 0 auto; }
-    .main-details .main-details-tabs .main-details-heading {
+    margin: 0 auto;
+    padding-bottom: 185px; }
+    .main-details .main-details-desc .main-details-heading {
       padding: 55px 0 60px 0;
       text-align: center; }
-      .main-details .main-details-tabs .main-details-heading h2 {
+      .main-details .main-details-desc .main-details-heading h2 {
         color: #ffffff;
         margin-bottom: 15px; }
-      .main-details .main-details-tabs .main-details-heading .headline {
+      .main-details .main-details-desc .main-details-heading .headline {
         font-family: "FuturaFuturisC-Regular";
         font-size: 35px; }
+  .main-details .main-details-tabs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 60px; }
+    .main-details .main-details-tabs .tab-link {
+      margin-right: 85px;
+      font-family: "SegoeUI-Bold";
+      font-size: 22px;
+      cursor: pointer; }
+      .main-details .main-details-tabs .tab-link span {
+        display: inline-block;
+        padding-bottom: 12px; }
+      .main-details .main-details-tabs .tab-link.current span {
+        border-bottom: 6px solid #ffffff; }
+  .main-details .main-details-content .tab-content {
+    position: relative;
+    z-index: 0;
+    display: none;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out; }
+    .main-details .main-details-content .tab-content.current {
+      display: inherit;
+      min-height: 915px; }
+    .main-details .main-details-content .tab-content.about:after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 623px;
+      height: 482px;
+      background-image: url("../images/img_triangle.png");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      bottom: 0;
+      right: calc((1366px - 1010px)/-2);
+      z-index: -1; }
+  .main-details .main-details-content .tab-content-item {
+    margin-bottom: 60px; }
+    .main-details .main-details-content .tab-content-item .title {
+      font-family: "SegoeUI-Bold";
+      font-size: 26px;
+      margin-bottom: 20px; }
+    .main-details .main-details-content .tab-content-item .desc {
+      font-family: "SegoeUI-Regular";
+      font-size: 26px; }
 
 /*# sourceMappingURL=style.css.map */

@@ -112,8 +112,103 @@ html
 						.main-details
 							.main-details-img
 								img(src='images/img_details-bg.jpg', width='1366', height='686', alt='')
-							.main-details-tabs
+							.main-details-desc
 								.main-details-heading
 									h2 Подробнее о карте и условиях
 									.headline Программы и условия по карте
-
+								.main-details-tabs-wrapper
+									.main-details-tabs
+										.tab-link(class='current' data-tab='tab-1')
+											span О карте
+										.tab-link(data-tab='tab-2')
+											span Тарифы
+										.tab-link(data-tab='tab-3')
+											span Документация
+										.tab-link(data-tab='tab-4')
+											span Полезная информация
+									.main-details-content
+										#tab-1(class='tab-content about current')
+											.tab-content-wrapper
+												.tab-content-item
+													p.title
+														| Платежная система
+													p.desc
+														| Mastercard
+												.tab-content-item
+													p.title
+														| Стоимость годового обслуживания
+													p.desc
+														| 3000 руб.
+												.tab-content-item
+													p.title
+														| Условия бесплатного обслуживания карты
+													p.desc
+														| Остатки на карте более 50 000 руб.
+												.tab-content-item
+													p.title
+														| Стоимость СМС информирования
+													p.desc
+														| 59 руб./месяц
+												.tab-content-item
+													p.title
+														| Проценты на остаток собственных средств
+													p.desc
+														| 5% баллами, при остатке по карте не менее 5000 руб.
+												.tab-content-item
+													p.title
+														| Поощерение за использование карты
+													p.desc
+														| 5% cash-back баллами на все операции оплаты, кроме вывода средств.
+														| Начисление производится при остатках по карте не менее 5000 руб.
+												.tab-content-item
+													p.title
+														| Ограничение на получение вознаграждения
+													p.desc
+														| Использование на возврат средств по операциям оплаты билетов в музеи и театры.
+														| Но не более 2 млн. руб. в год по всем картам банка.
+										#tab-2(class='tab-content')
+											.tab-content-wrapper
+												.tab-content-item
+													p.title
+														| Стоимость СМС информирования
+													p.desc
+														| 59 руб./месяц
+												.tab-content-item
+													p.title
+														| Проценты на остаток собственных средств
+													p.desc
+														| 5% баллами, при остатке по карте не менее 5000 руб.
+												.tab-content-item
+													p.title
+														| Поощерение за использование карты
+													p.desc
+														| 5% cash-back баллами на все операции оплаты, кроме вывода средств.
+														| Начисление производится при остатках по карте не менее 5000 руб.
+												.tab-content-item
+													p.title
+														| Ограничение на получение вознаграждения
+													p.desc
+														| Использование на возврат средств по операциям оплаты билетов в музеи и театры.
+														| Но не более 2 млн. руб. в год по всем картам банка.
+										#tab-3(class='tab-content')
+											.tab-content-wrapper
+												.tab-content-item
+													p.title
+														| Поощерение за использование карты
+													p.desc
+														| 5% cash-back баллами на все операции оплаты, кроме вывода средств.
+														| Начисление производится при остатках по карте не менее 5000 руб.
+												.tab-content-item
+													p.title
+														| Ограничение на получение вознаграждения
+													p.desc
+														| Использование на возврат средств по операциям оплаты билетов в музеи и театры.
+														| Но не более 2 млн. руб. в год по всем картам банка.
+										#tab-4(class='tab-content')
+											.tab-content-wrapper
+												.tab-content-item
+													p.title
+														| Ограничение на получение вознаграждения
+													p.desc
+														| Использование на возврат средств по операциям оплаты билетов в музеи и театры.
+														| Но не более 2 млн. руб. в год по всем картам банка.
