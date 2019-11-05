@@ -64,7 +64,11 @@ ul {
   border-radius: 0;
   transition: 0.2s ease-in-out;
   border: 1px solid transparent; }
-  .btn:hover, .btn:focus {
+  .btn:focus {
+    color: #ffffff;
+    outline: none;
+    box-shadow: none; }
+  .btn:hover {
     color: #140e0b;
     border: 1px solid #a7a7a7;
     background-color: #ffffff; }
@@ -388,10 +392,177 @@ nav {
       line-height: 115%; }
 
 .footer-wrapper {
-  padding: 15px 55px 35px 55px;
+  padding: 15px 145px 35px 55px;
   background-color: #f1f1f1; }
   .footer-wrapper .footer-main {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    margin-bottom: 20px; }
+    .footer-wrapper .footer-main .footer-main-item .footer-main-item-title {
+      font-size: 16px;
+      font-family: "ProximaNova-Regular";
+      margin-bottom: 35px;
+      margin-top: 10px; }
+    .footer-wrapper .footer-main .footer-main-item .footer-main-applications {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start; }
+      .footer-wrapper .footer-main .footer-main-item .footer-main-applications .footer-main-application-link {
+        margin-bottom: 25px; }
+    .footer-wrapper .footer-main .footer-main-item .footer-main-social {
+      width: 215px;
+      height: 135px;
+      position: relative;
+      padding: 10px;
+      z-index: 0; }
+      .footer-wrapper .footer-main .footer-main-item .footer-main-social:before {
+        content: '';
+        position: absolute;
+        background-image: url("../images/img_card.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        filter: grayscale(1);
+        opacity: 0.1;
+        z-index: -1; }
+      .footer-wrapper .footer-main .footer-main-item .footer-main-social .footer-main-social-link {
+        margin-right: 10px; }
+    .footer-wrapper .footer-main .footer-main-item .footer-main-logo {
+      margin-bottom: 23px; }
+    .footer-wrapper .footer-main .footer-main-item .footer-main-license {
+      margin-bottom: 27px;
+      font-size: 16px;
+      color: #272525;
+      line-height: 115%; }
+    .footer-wrapper .footer-main .footer-main-item .footer-tel-wrapper {
+      font-family: "SegoeUI-Bold";
+      font-size: 16px;
+      color: #272525; }
+      .footer-wrapper .footer-main .footer-main-item .footer-tel-wrapper .footer-tel-link {
+        margin-bottom: 25px; }
+      .footer-wrapper .footer-main .footer-main-item .footer-tel-wrapper .tel-link {
+        font-size: 18px; }
+
+.main-order-form-wrapper {
+  margin-top: -45px; }
+
+.main-order-form .main-order-form-stage {
+  font-size: 27px;
+  font-family: "FuturaFuturisC-Regular";
+  color: #000000;
+  margin-bottom: 20px;
+  text-align: right; }
+.main-order-form .main-order-form-content {
+  min-height: 355px;
+  min-width: 510px; }
+  .main-order-form .main-order-form-content .main-order-form-item {
+    display: none; }
+    .main-order-form .main-order-form-content .main-order-form-item.active {
+      display: block; }
+    .main-order-form .main-order-form-content .main-order-form-item > .title {
+      font-family: "ProximaNova-Bold";
+      font-size: 28px;
+      margin-bottom: 30px;
+      color: #000000; }
+    .main-order-form .main-order-form-content .main-order-form-item[data-item='2'] .label-content .title {
+      min-width: 150px; }
+    .main-order-form .main-order-form-content .main-order-form-item[data-item='3'] .label-content .title {
+      min-width: 195px; }
+    .main-order-form .main-order-form-content .main-order-form-item[data-item='4'] .label-content label {
+      flex-wrap: wrap; }
+    .main-order-form .main-order-form-content .main-order-form-item[data-item='4'] .title {
+      margin-bottom: 20px; }
+.main-order-form .btn-wrapper {
+  margin-top: 50px; }
+.main-order-form .btn {
+  min-width: 225px; }
+  .main-order-form .btn.forward-link:focus, .main-order-form .btn.forward-link:hover {
+    color: #ffffff;
+    background-color: #140e0b;
+    border: 1px solid transparent; }
+  .main-order-form .btn.back-link {
+    color: #140e0b;
+    border: 1px solid #a7a7a7;
+    background-color: #ffffff;
+    margin-right: 30px; }
+    .main-order-form .btn.back-link.inactive {
+      display: none; }
+.main-order-form .checkbox-wrapper.confirm label {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start; }
+  .main-order-form .checkbox-wrapper.confirm label:before {
+    content: '';
+    display: block;
+    margin-right: 44px;
+    width: 31px;
+    height: 31px;
+    background-image: url("../images/ico_confirm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-shrink: 0; }
+.main-order-form .checkbox-wrapper.confirm input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  opacity: 0; }
+.main-order-form .checkbox-wrapper.confirm p {
+  font-size: 14px;
+  font-family: "SegoeUI-Regular";
+  color: #000000; }
+  .main-order-form .checkbox-wrapper.confirm p span {
+    display: inline;
+    vertical-align: middle; }
+  .main-order-form .checkbox-wrapper.confirm p a {
+    display: inline;
+    vertical-align: middle;
+    color: #929292; }
+.main-order-form .label-content label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  position: relative; }
+.main-order-form .label-content .title {
+  font-family: "SegoeUI-Bold";
+  font-size: 20px;
+  color: #272525;
+  margin-right: 20px;
+  flex-shrink: 0;
+  min-width: 95px; }
+.main-order-form .label-content input {
+  width: 100%;
+  height: 46px;
+  padding: 8px 10px;
+  border-color: #140e0b;
+  font-size: 16px;
+  font-family: "SegoeUI-Regular"; }
+  .main-order-form .label-content input:focus {
+    outline: none; }
+.main-order-form .label-content .error {
+  display: none;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 115px; }
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */ }
 
 /*# sourceMappingURL=style.css.map */

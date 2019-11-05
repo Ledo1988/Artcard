@@ -119,13 +119,13 @@ html
 								.main-details-tabs-wrapper
 									.main-details-tabs
 										.tab-link(class='current' data-tab='tab-1')
-											span О карте
+											span.noselect О карте
 										.tab-link(data-tab='tab-2')
-											span Тарифы
+											span.noselect Тарифы
 										.tab-link(data-tab='tab-3')
-											span Документация
+											span.noselect Документация
 										.tab-link(data-tab='tab-4')
-											span Полезная информация
+											span.noselect Полезная информация
 									.main-details-content
 										#tab-1(class='tab-content about current')
 											.tab-content-wrapper
@@ -227,6 +227,52 @@ html
 									p.desc
 										| Потрать на билеты  <br>в театры и музеи
 							.main-order-form-wrapper
+								form(class='main-order-form' data-stage='1' action='/')
+									.main-order-form-stage
+										span.current 1
+										|/
+										span.total 5
+									.main-order-form-content
+										.main-order-form-item(data-item='1' class='active')
+											+input('surname', 'Фамилия', '', 'text', 'surname', 'required', '', '*Введите фамилию, является обязательным полем')
+											+input('name', 'Имя', '', 'text', 'name', 'required', '', '*Введите имя, является обязательным полем')
+											+input('tel', 'Телефон', '', 'tel', 'tel', 'required', '', '*Введите телефон, является обязательным полем')
+											+input('email', 'E-mail', '', 'email', 'emain', 'required', '', '*Введите почту, является обязательным полем')
+											.checkbox-wrapper.confirm
+												input(type="checkbox" id='confirm' name='confirm' value='' checked)
+												label(for='confirm')
+													p
+														span Нажимая кнопку «Далее», я соглашаюсь
+														a(href='/') &nbsp;с условиями направления заявки и рекламно‑информационного обслуживания
+										.main-order-form-item(data-item='2')
+											.title Дополнительная информация
+											+input('surname-1', 'Фамилия', '', 'text', 'surname', 'required', '', '*Введите фамилию, является обязательным полем')
+											+input('name-1', 'Имя', '', 'text', 'name', 'required', '', '*Введите имя, является обязательным полем')
+											+input('text', 'Кодовое слово', '', 'key-word', 'key-word', 'required', '', '*Введите кодовое слово, является обязательным полем')
+											+input__radio('visa-card', 'card', 'visa-card', 'visa-card', 'checked')
+											+input__radio('mastercard-card', 'card', 'mastercard-card', 'mastercard-card', '')
+										.main-order-form-item(data-item='3')
+											.title Заполните паспортные данные
+											+input('passport-number', 'Серия и номер', '', 'text', 'passport-number', 'required', '', '*Введите серию и номер, является обязательным полем')
+											+input('birthday', 'Дата рождения', '', 'date', 'birthday', 'required', '', '*Введите дату рождения, является обязательным полем')
+											+input('birthplace', 'Место рождения', '', 'text', 'birthplace', 'required', '', '*Введите место рождения, является обязательным полем')
+											+input('code', 'Код подразделения', '', 'number', 'code', 'required', '', '*Введите код подразделения, является обязательным полем')
+											+input('dateissuing', 'Дата выдачи', '', 'date', 'dateissuing', 'required', '', '*Введите дату выдачи, является обязательным полем')
+											+input('whoissued', 'Кем выдан', '', 'text', 'whoissued', 'required', '', '*Введите кем выдан, является обязательным полем')
+										.main-order-form-item(data-item='4')
+											.title Укажите свой адрес
+											+input('reg-address', 'Адрес регистрации (как заполнено в паспорте)', '', 'text', 'reg-address', 'required', '', '*Введите адрес регистрации, является обязательным полем')
+											.title Адрес фактического проживания
+											div.title Совпадает с адресом регистрации
+											+input('real-address', 'Фактический адрес', '', 'text', 'real-address', 'required', '', '*Введите фактический адрес, является обязательным полем')
+										.main-order-form-item(data-item='5')
+											.title Доставка
+											.dropwdown Санкт-Петербург
+											.dropwdown Выберите отделение
+											.map MAP
+									.btn-wrapper
+										+link('javascript:void(0);', 'back-link main-order-back inactive btn', 'Назад')
+										+link('javascript:void(0);', 'forward-link main-order-forward btn', 'Далее')
 		footer
 			.container-fluid
 				.container

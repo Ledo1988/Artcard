@@ -17,14 +17,16 @@ mixin list-item(name, href)
 	li
 		a(href=href)=name
 
-mixin input(idName, value, type, name, required, placeholder, readonly)
+mixin input(idName, title, value, type, name, required, placeholder, error)
 	.label-content
 		label(for=idName)
-			input(id=idName value=value type=type name=name required=required placeholder=placeholder readonly=readonly)
+			span.title=title
+			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
+			span.error=error
 
 mixin input__checkbox(idName, name, value, Title)
 	.checkbox-wrapper
-		input(type="checkbox" id=idName name=name value=value)
+		input(type="checkbox" id=idName name=name value=value checked)
 		label(for=idName)
 			span=Title
 

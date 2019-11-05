@@ -126,10 +126,10 @@
                 </div>
                 <div class="main-details-tabs-wrapper">
                   <div class="main-details-tabs">
-                    <div class="tab-link current" data-tab="tab-1"><span>О карте</span></div>
-                    <div class="tab-link" data-tab="tab-2"><span>Тарифы</span></div>
-                    <div class="tab-link" data-tab="tab-3"><span>Документация</span></div>
-                    <div class="tab-link" data-tab="tab-4"><span>Полезная информация</span></div>
+                    <div class="tab-link current" data-tab="tab-1"><span class="noselect">О карте</span></div>
+                    <div class="tab-link" data-tab="tab-2"><span class="noselect">Тарифы</span></div>
+                    <div class="tab-link" data-tab="tab-3"><span class="noselect">Документация</span></div>
+                    <div class="tab-link" data-tab="tab-4"><span class="noselect">Полезная информация</span></div>
                   </div>
                   <div class="main-details-content">
                     <div class="tab-content about current" id="tab-1">
@@ -243,7 +243,123 @@
                   <p class="desc">Потрать на билеты  <br>в театры и музеи</p>
                 </div>
               </div>
-              <div class="main-order-form-wrapper"></div>
+              <div class="main-order-form-wrapper">
+                <form class="main-order-form" data-stage="1" action="/">
+                  <div class="main-order-form-stage"><span class="current">1</span>/<span class="total">5</span></div>
+                  <div class="main-order-form-content">
+                    <div class="main-order-form-item active" data-item="1">
+                        <div class="label-content">
+                          <label for="surname"><span class="title">Фамилия</span>
+                            <input id="surname" value="" type="text" name="surname" required="required" placeholder=""><span class="error">*Введите фамилию, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="name"><span class="title">Имя</span>
+                            <input id="name" value="" type="text" name="name" required="required" placeholder=""><span class="error">*Введите имя, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="tel"><span class="title">Телефон</span>
+                            <input id="tel" value="" type="tel" name="tel" required="required" placeholder=""><span class="error">*Введите телефон, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="email"><span class="title">E-mail</span>
+                            <input id="email" value="" type="email" name="emain" required="required" placeholder=""><span class="error">*Введите почту, является обязательным полем</span>
+                          </label>
+                        </div>
+                      <div class="checkbox-wrapper confirm">
+                        <input type="checkbox" id="confirm" name="confirm" value="" checked>
+                        <label for="confirm">
+                          <p><span>Нажимая кнопку «Далее», я соглашаюсь</span><a href="/">&nbsp;с условиями направления заявки и рекламно‑информационного обслуживания</a></p>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="main-order-form-item" data-item="2">
+                      <div class="title">Дополнительная информация</div>
+                        <div class="label-content">
+                          <label for="surname-1"><span class="title">Фамилия</span>
+                            <input id="surname-1" value="" type="text" name="surname" required="required" placeholder=""><span class="error">*Введите фамилию, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="name-1"><span class="title">Имя</span>
+                            <input id="name-1" value="" type="text" name="name" required="required" placeholder=""><span class="error">*Введите имя, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="text"><span class="title">Кодовое слово</span>
+                            <input id="text" value="" type="key-word" name="key-word" required="required" placeholder=""><span class="error">*Введите кодовое слово, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="radio-wrapper">
+                          <input type="radio" id="visa-card" name="card" value="visa-card" checked="checked">
+                          <label for="visa-card"><span>visa-card</span></label>
+                        </div>
+                        <div class="radio-wrapper">
+                          <input type="radio" id="mastercard-card" name="card" value="mastercard-card" checked="">
+                          <label for="mastercard-card"><span>mastercard-card</span></label>
+                        </div>
+                    </div>
+                    <div class="main-order-form-item" data-item="3">
+                      <div class="title">Заполните паспортные данные</div>
+                        <div class="label-content">
+                          <label for="passport-number"><span class="title">Серия и номер</span>
+                            <input id="passport-number" value="" type="text" name="passport-number" required="required" placeholder=""><span class="error">*Введите серию и номер, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="birthday"><span class="title">Дата рождения</span>
+                            <input id="birthday" value="" type="date" name="birthday" required="required" placeholder=""><span class="error">*Введите дату рождения, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="birthplace"><span class="title">Место рождения</span>
+                            <input id="birthplace" value="" type="text" name="birthplace" required="required" placeholder=""><span class="error">*Введите место рождения, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="code"><span class="title">Код подразделения</span>
+                            <input id="code" value="" type="number" name="code" required="required" placeholder=""><span class="error">*Введите код подразделения, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="dateissuing"><span class="title">Дата выдачи</span>
+                            <input id="dateissuing" value="" type="date" name="dateissuing" required="required" placeholder=""><span class="error">*Введите дату выдачи, является обязательным полем</span>
+                          </label>
+                        </div>
+                        <div class="label-content">
+                          <label for="whoissued"><span class="title">Кем выдан</span>
+                            <input id="whoissued" value="" type="text" name="whoissued" required="required" placeholder=""><span class="error">*Введите кем выдан, является обязательным полем</span>
+                          </label>
+                        </div>
+                    </div>
+                    <div class="main-order-form-item" data-item="4">
+                      <div class="title">Укажите свой адрес</div>
+                        <div class="label-content">
+                          <label for="reg-address"><span class="title">Адрес регистрации (как заполнено в паспорте)</span>
+                            <input id="reg-address" value="" type="text" name="reg-address" required="required" placeholder=""><span class="error">*Введите адрес регистрации, является обязательным полем</span>
+                          </label>
+                        </div>
+                      <div class="title">Адрес фактического проживания</div>
+                      <div class="title">Совпадает с адресом регистрации</div>
+                        <div class="label-content">
+                          <label for="real-address"><span class="title">Фактический адрес</span>
+                            <input id="real-address" value="" type="text" name="real-address" required="required" placeholder=""><span class="error">*Введите фактический адрес, является обязательным полем</span>
+                          </label>
+                        </div>
+                    </div>
+                    <div class="main-order-form-item" data-item="5">
+                      <div class="title">Доставка</div>
+                      <div class="dropwdown">Санкт-Петербург</div>
+                      <div class="dropwdown">Выберите отделение</div>
+                      <div class="map">MAP</div>
+                    </div>
+                  </div>
+                  <div class="btn-wrapper"><a class="back-link main-order-back inactive btn" href="javascript:void(0);">Назад</a><a class="forward-link main-order-forward btn" href="javascript:void(0);">Далее</a>
+                  </div>
+                </form>
+              </div>
             </div>
           </div>
         </div>
