@@ -22,6 +22,8 @@ $(document).ready(function() {
 		}, 500);
 	});
 
+	var windowWidth = $(window).width();
+
 	$('body .main-details-tabs').on('click', '.tab-link', function(){
 		var tab_id = $(this).attr('data-tab');
 
@@ -55,7 +57,13 @@ $(document).ready(function() {
 		}
 	});
 
+	if (windowWidth <= 768) {
+		$('body .lk-link').html('Личный кабинет');
+	}
 
+	if (windowWidth <= 375) {
+		$('body .main-details-img img').attr('src', 'images/img_mobile-view.jpg');
+	}
 
 
 

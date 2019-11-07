@@ -16,8 +16,8 @@ html
 	title Арт-карта
 	body
 		header
-
-				.container
+			.container
+				.row
 					.header-wrapper
 						.header-main
 							.header-main-logo
@@ -37,8 +37,8 @@ html
 								+list-item('Программы и условия', '#details')
 								+list-item('Заказать карту', '#order')
 		main
-
-				.container
+			.container
+				.row
 					.main-slider
 						.swiper-container(class='main-swiper')
 							.swiper-wrapper
@@ -295,8 +295,8 @@ html
 										+link('javascript:void(0);', 'back-link main-order-back inactive btn', 'Назад')
 										+link('javascript:void(0);', 'forward-link main-order-forward btn', 'Далее')
 		footer
-			.container-fluid
-				.container
+			.container
+				.row
 					.footer-wrapper
 						.footer-main
 							.footer-main-item.about
@@ -315,7 +315,7 @@ html
 								.footer-main-applications
 									+link-with-img ('/', 'footer-main-application-link', 'images/ico_app-google.png', '164', '48', 'Банк Таврический - Google')
 									+link-with-img ('/', 'footer-main-application-link', 'images/ico_app-apple.png', '164', '48', 'Банк Таврический - AppStore')
-							.footer-main-item.about.social
+							.footer-main-item.social
 								.footer-main-item-title Узнать больше
 								.footer-main-social
 									+link-with-img ('/', 'footer-main-social-link', 'images/ico_social-vk.png', '46', '46', 'Банк Таврический - Vkontakte')
