@@ -48,7 +48,15 @@ $(document).ready(function() {
 		$(this).parents('.main-order-form').find('.main-order-form-stage .current').html(stageCurrent);
 
 		$(this).parents('.main-order-form').find('.main-order-form-item').removeClass('active');
-		$(this).parents('.main-order-form').find(`[data-item='${stageCurrent}']`).addClass('active');
+		$(this).parents('.main-order-form').find('.main-order-form-item').each(function() {
+			var itemCurrent = $(this);
+
+			if ($(itemCurrent).data('item') == stageCurrent) {
+				$(itemCurrent).addClass('active');
+			}
+		});
+
+		//$(this).parents('.main-order-form').find(`[data-item='${stageCurrent}']`).addClass('active');
 
 		if (stageCurrent == 1) {
 			$('body .main-order-form').find('.main-order-back').addClass('inactive');
