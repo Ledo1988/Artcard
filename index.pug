@@ -8,6 +8,7 @@ html
 	link(href='css/swiper/swiper.min.css' type='text/css' rel='stylesheet')
 	link(href='css/style.css' type='text/css' rel='stylesheet')
 	script(src='js/jquery/jquery-3.4.1.min.js')
+	script(src='js/jquery-mask/jquery.mask.min.js')
 	script(src='js/bootstrap/bootstrap.min.js')
 	script(src='js/swiper/swiper.min.js')
 	script(src='js/script.js')
@@ -15,7 +16,7 @@ html
 	title Арт-карта
 	body
 		header
-			.container-fluid
+
 				.container
 					.header-wrapper
 						.header-main
@@ -30,13 +31,13 @@ html
 
 						nav
 							ul.header-nav
-								+list-item('О карте', 'javascript:void(0);')
-								+list-item('Искусство', 'javascript:void(0);')
-								+list-item('Активити', 'javascript:void(0);')
-								+list-item('Программы и условия', 'javascript:void(0);')
-								+list-item('Заказать карту', 'javascript:void(0);')
+								+list-item('О карте', '#about')
+								+list-item('Искусство', '#advantages')
+								+list-item('Активити', '#mobile')
+								+list-item('Программы и условия', '#details')
+								+list-item('Заказать карту', '#order')
 		main
-			.container-fluid
+
 				.container
 					.main-slider
 						.swiper-container(class='main-swiper')
@@ -47,6 +48,7 @@ html
 									img(src='images/img_slider-2.jpg', width='1366', height='640', alt='')
 
 					.main-about-wrapper
+						a(id='about')
 						h2 Art Card
 						.main-about
 							.main-about-img
@@ -60,8 +62,9 @@ html
 								p.desc
 									| К программе подключено более 50 музеев, 100 театров
 								.btn-wrapper
-									+link('javascript:void(0);', 'order-link btn', 'Заказать карту')
+									+link('#order', 'order-link btn', 'Заказать карту')
 					.main-advantages-wrapper
+						a(id='advantages')
 						.main-advantages-heading
 							h2 Искусство в твоей карте
 							.headline Программы и условия по карте
@@ -98,6 +101,7 @@ html
 										span.big 0
 										| &nbsp; бесплатное обслуживание
 					.main-mobile-wrapper
+						a(id='mobile')
 						.main-mobile
 							.img-wrapper
 								img(src='images/img_mobile.png', width='293', height='527', alt='')
@@ -109,6 +113,7 @@ html
 									p Подписка на экспертные обзоры выставок и  театральных премьер
 
 					.main-details-wrapper
+						a(id='details')
 						.main-details
 							.main-details-img
 								img(src='images/img_details-bg.jpg', width='1366', height='686', alt='')
@@ -213,6 +218,7 @@ html
 														| Использование на возврат средств по операциям оплаты билетов в музеи и театры.
 														| Но не более 2 млн. руб. в год по всем картам банка.
 					.main-order-wrapper
+						a(id='order')
 						.main-order-heading
 							h2 Получить карту
 							.headline Закажите карту, не выходя из дома
@@ -234,10 +240,10 @@ html
 										span.total 5
 									.main-order-form-content
 										.main-order-form-item(data-item='1' class='active')
-											+input('surname', 'Фамилия', '', 'text', 'surname', 'required', '', '*Введите фамилию, является обязательным полем')
-											+input('name', 'Имя', '', 'text', 'name', 'required', '', '*Введите имя, является обязательным полем')
-											+input('tel', 'Телефон', '', 'tel', 'tel', 'required', '', '*Введите телефон, является обязательным полем')
-											+input('email', 'E-mail', '', 'email', 'emain', 'required', '', '*Введите почту, является обязательным полем')
+											+input('surname', 'Фамилия', '', 'text', '', 'surname', 'required', '', '*Введите фамилию, является обязательным полем')
+											+input('name', 'Имя', '', 'text', '', 'name', 'required', '', '*Введите имя, является обязательным полем')
+											+input('tel', 'Телефон', '', 'tel', 'tel', 'tel', 'required', '', '*Введите телефон, является обязательным полем')
+											+input('email', 'E-mail', '', 'email', '', 'email', 'required', '', '*Введите почту, является обязательным полем')
 											.checkbox-wrapper.confirm
 												input(type="checkbox" id='confirm' name='confirm' value='' checked)
 												label(for='confirm')
@@ -246,30 +252,45 @@ html
 														a(href='/') &nbsp;с условиями направления заявки и рекламно‑информационного обслуживания
 										.main-order-form-item(data-item='2')
 											.title Дополнительная информация
-											+input('surname-1', 'Фамилия', '', 'text', 'surname', 'required', '', '*Введите фамилию, является обязательным полем')
-											+input('name-1', 'Имя', '', 'text', 'name', 'required', '', '*Введите имя, является обязательным полем')
-											+input('text', 'Кодовое слово', '', 'key-word', 'key-word', 'required', '', '*Введите кодовое слово, является обязательным полем')
-											+input__radio('visa-card', 'card', 'visa-card', 'visa-card', 'checked')
-											+input__radio('mastercard-card', 'card', 'mastercard-card', 'mastercard-card', '')
+											+input('surname-1', 'Фамилия', '', 'text', '', 'surname', 'required', '', '*Введите фамилию, является обязательным полем')
+											+input('name-1', 'Имя', '', 'text', '', 'name', 'required', '', '*Введите имя, является обязательным полем')
+											+input('text', 'Кодовое слово', '','text', '', 'key-word', 'required', '', '*Введите кодовое слово, является обязательным полем')
+											.main-order-form-cards-wrapper
+												+input__radio('visa', 'card', 'visa', 'visa', '')
+												+input__radio('mastercard', 'card', 'mastercard', 'mastercard')
 										.main-order-form-item(data-item='3')
 											.title Заполните паспортные данные
-											+input('passport-number', 'Серия и номер', '', 'text', 'passport-number', 'required', '', '*Введите серию и номер, является обязательным полем')
-											+input('birthday', 'Дата рождения', '', 'date', 'birthday', 'required', '', '*Введите дату рождения, является обязательным полем')
-											+input('birthplace', 'Место рождения', '', 'text', 'birthplace', 'required', '', '*Введите место рождения, является обязательным полем')
-											+input('code', 'Код подразделения', '', 'number', 'code', 'required', '', '*Введите код подразделения, является обязательным полем')
-											+input('dateissuing', 'Дата выдачи', '', 'date', 'dateissuing', 'required', '', '*Введите дату выдачи, является обязательным полем')
-											+input('whoissued', 'Кем выдан', '', 'text', 'whoissued', 'required', '', '*Введите кем выдан, является обязательным полем')
+											+input('passport-number', 'Серия и номер', '', 'text', 'passport', 'passport-number', 'required', '', '*Введите серию и номер, является обязательным полем')
+											+input('birthday', 'Дата рождения', '', 'text', 'date', 'birthday', 'required', '', '*Введите дату рождения, является обязательным полем')
+											+input('birthplace', 'Место рождения', '', 'text', '', 'birthplace', 'required', '', '*Введите место рождения, является обязательным полем')
+											+input('code', 'Код подразделения', '', 'text', 'code', 'code', 'required', '', '*Введите код подразделения, является обязательным полем')
+											+input('date-issuing', 'Дата выдачи', '', 'text', 'date', 'date-issuing', 'required', '', '*Введите дату выдачи, является обязательным полем')
+											+input('who-issued', 'Кем выдан', '', 'text', '', 'who-issued', 'required', '', '*Введите кем выдан, является обязательным полем')
 										.main-order-form-item(data-item='4')
 											.title Укажите свой адрес
-											+input('reg-address', 'Адрес регистрации (как заполнено в паспорте)', '', 'text', 'reg-address', 'required', '', '*Введите адрес регистрации, является обязательным полем')
+											+input('reg-address', 'Адрес регистрации (как заполнено в паспорте)', '', 'text', '', 'reg-address', 'required', '', '*Введите адрес регистрации, является обязательным полем')
 											.title Адрес фактического проживания
-											div.title Совпадает с адресом регистрации
-											+input('real-address', 'Фактический адрес', '', 'text', 'real-address', 'required', '', '*Введите фактический адрес, является обязательным полем')
+											+input('real-address', 'Фактический адрес', '', 'text', '', 'real-address', 'required', '', '*Введите фактический адрес, является обязательным полем')
 										.main-order-form-item(data-item='5')
 											.title Доставка
-											.dropwdown Санкт-Петербург
-											.dropwdown Выберите отделение
-											.map MAP
+											.main-order-form-select-wrapper
+												select(class='main-order-form-select city')
+													+select_option('1', 'selected', 'Санкт-Петербург')
+													+select_option('2', '', 'Москва')
+													+select_option('3', '', 'Сосновый Бор')
+													+select_option('4', '', 'Кингисепп')
+													+select_option('5', '', 'Сыктывкар')
+											.main-order-form-select-wrapper
+												select(class='main-order-form-select department')
+													+select_option('', 'selected', 'Выберите отделение')
+													+select_option('ул. Радищева, д. 39', '', 'ул. Радищева, д. 39')
+													+select_option('Московский пр., д.130', '', 'Московский пр., д.130')
+													+select_option('ул. Малая Балканская, д. 26, лит. А', '', 'ул. Малая Балканская, д. 26, лит. А')
+													+select_option('ул. Радищева, д.39, лит. Д', '', 'ул. Радищева, д.39, лит. Д')
+													+select_option('Ленинский пр., д.160а', '', 'Ленинский пр., д.160а')
+											.main-order-form-map
+												.map-wrapper
+													img(src='images/img_map.png', width='669', height='390', alt='Карта')
 									.btn-wrapper
 										+link('javascript:void(0);', 'back-link main-order-back inactive btn', 'Назад')
 										+link('javascript:void(0);', 'forward-link main-order-forward btn', 'Далее')

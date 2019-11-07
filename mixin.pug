@@ -17,11 +17,11 @@ mixin list-item(name, href)
 	li
 		a(href=href)=name
 
-mixin input(idName, title, value, type, name, required, placeholder, error)
+mixin input(idName, title, value, type, className, name, required, placeholder, error)
 	.label-content
 		label(for=idName)
 			span.title=title
-			input(id=idName value=value type=type name=name required=required placeholder=placeholder)
+			input(id=idName value=value type=type class=className name=name required=required placeholder=placeholder)
 			span.error=error
 
 mixin input__checkbox(idName, name, value, Title)
@@ -41,6 +41,9 @@ mixin toggle(idName, Title, checked)
 		input(type="checkbox"  id=idName checked=checked class="cb-value")
 		label(for=idName)
 			span=Title
+
+mixin select_option(value, selected, name)
+	option(value=value selected=selected)=name
 
 mixin dropdown-option (Title, idName, value)
 	li

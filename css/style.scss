@@ -39,6 +39,10 @@ h1, h2 {
   color: $color_black-pale;
   font-family: $font_futura-light;
   font-size: 63px;
+
+  @media (max-width: 1024px) {
+    font-size: 52px;
+  }
 }
 
 ul {
@@ -59,6 +63,10 @@ ul {
   transition: $transition;
   border: 1px solid transparent;
 
+  @media (max-width: 1024px) {
+    font-size: 18px;
+  }
+
   &:focus {
     color: $color_white;
    outline: none;
@@ -75,6 +83,10 @@ ul {
 
 .header-wrapper {
   padding: 0 55px;
+
+  @media (max-width: 1024px) {
+    padding: 0;
+  }
 }
 
 .header-main {
@@ -86,6 +98,10 @@ ul {
 
   .header-main-logo {
     flex-shrink: 0;
+
+    @media (max-width: 1024px) {
+      max-width: 193px;
+    }
   }
 
   h1{
@@ -104,6 +120,15 @@ ul {
       margin-bottom: 15px;
       transition: $transition;
 
+      @media (max-width: 1024px) {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
+      }
+
       &:hover, &:focus {
         color: $color_black-rich;
       }
@@ -112,6 +137,12 @@ ul {
     .lk-wrapper {
       font-size: 14px;
       font-family: $font_segoe-regular;
+
+      @media (max-width: 768px) {
+        span {
+          display: none;
+        }
+      }
 
       .lk-link {
         font-family: $font_segoe-bold;
@@ -135,6 +166,15 @@ nav {
   z-index: 2;
   position: relative;
 
+  @media (max-width: 1024px) {
+    padding: 28px 15px 35px 15px;
+    margin: 0 0px -85px 0px;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
   .header-nav {
     display: flex;
     align-items: center;
@@ -146,6 +186,10 @@ nav {
 
       a {
         font-size: 25px;
+
+        @media (max-width: 1024px) {
+          font-size: 22px;
+        }
       }
 
       &:first-of-type a {
@@ -172,6 +216,10 @@ nav {
 
 .big {
   font-size: 80px;
+
+  @media (max-width: 1024px) {
+    font-size: 60px;
+  }
 }
 
 .main-about {
@@ -192,6 +240,11 @@ nav {
       margin-bottom: 20px;
       text-transform: uppercase;
 
+      @media (max-width: 1024px) {
+        font-size: 38px;
+        margin-bottom: 15px;
+      }
+
 
     }
 
@@ -201,6 +254,11 @@ nav {
       color: $color_black-rich;
       line-height: 115%;
       margin-bottom: 30px;
+
+      @media (max-width: 1024px) {
+        font-size: 26px;
+        margin-bottom: 20px;
+      }
     }
 
     .desc {
@@ -259,6 +317,10 @@ nav {
       font-family: $font_futura-regular;
       font-size: 35px;
       color: $color_black;
+
+      @media (max-width: 1024px) {
+        font-size: 30px;
+      }
     }
   }
 }
@@ -292,6 +354,10 @@ nav {
         margin-top: 40px;
         max-width: 270px;
         text-align: left;
+
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
       }
     }
   }
@@ -308,12 +374,21 @@ nav {
       align-items: center;
       justify-content: flex-start;
 
+      @media (max-width: 1024px) {
+        font-size: 26px;
+        margin-bottom: 25px;
+      }
+
       p{
         margin-bottom: 0;
       }
 
       .big {
         font-size: 44px;
+
+        @media (max-width: 1024px) {
+          font-size: 38px;
+        }
       }
 
       &:before {
@@ -368,6 +443,10 @@ nav {
       color: $color_black;
       margin-bottom: 45px;
       line-height: 90%;
+
+      @media (max-width: 1024px) {
+        font-size: 40px;
+      }
     }
   }
 
@@ -388,6 +467,12 @@ nav {
     margin: 0 auto;
     padding-bottom: 185px;
 
+    @media (max-width: 1024px) {
+      max-width: 100%;
+      margin: 0 30px;
+      padding-bottom: 65px;
+    }
+
     .main-details-heading {
       padding: 55px 0 60px 0;
       text-align: center;
@@ -400,6 +485,10 @@ nav {
       .headline {
         font-family: $font_futura-regular;
         font-size: 35px;
+
+        @media (max-width: 1024px) {
+          font-size: 30px;
+        }
       }
     }
   }
@@ -410,11 +499,21 @@ nav {
     justify-content: flex-start;
     margin-bottom: 60px;
 
+    @media (max-width: 1024px) {
+      justify-content: space-between;
+      margin-bottom: 40px;
+    }
+
     .tab-link {
       margin-right: 85px;
       font-family: $font_segoe-bold;
       font-size: 22px;
       cursor: pointer;
+
+      @media (max-width: 1024px) {
+        margin-right: 0;
+        flex-shrink: 0;
+      }
 
       span {
         display: inline-block;
@@ -442,6 +541,10 @@ nav {
       &.current {
         display: inherit;
         min-height: 915px;
+
+        @media (max-width: 1024px) {
+          min-height: 870px;
+        }
       }
 
       &.about:after {
@@ -454,21 +557,42 @@ nav {
         bottom: 0;
         right: calc((1366px - 1010px)/-2);
         z-index: -1;
+
+        @media (max-width: 1400px) {
+          right: calc((1110px - 1010px)/-2);
+        }
+
+        @media (max-width: 1024px) {
+          right: -30px;
+        }
       }
     }
 
     .tab-content-item {
       margin-bottom: 60px;
 
+      @media (max-width: 1024px) {
+        margin-bottom: 40px;
+      }
+
       .title {
         font-family: $font_segoe-bold;
         font-size: 26px;
         margin-bottom: 20px;
+
+        @media (max-width: 1024px) {
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
       }
 
       .desc {
         font-family: $font_segoe-regular;
         font-size: 26px;
+
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
 
       }
     }
@@ -489,6 +613,10 @@ nav {
       font-family: $font_futura-regular;
       font-size: 35px;
       color: $color_black;
+
+      @media (max-width: 1024px) {
+        font-size: 30px;
+      }
     }
   }
 }
@@ -499,9 +627,17 @@ nav {
   display: flex;
   justify-content: space-between;
 
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+
   .img-desc-wrapper {
     margin-right: 90px;
     flex-shrink: 0;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
 
     .img-wrapper {
       margin-bottom: 55px;
@@ -515,8 +651,17 @@ nav {
         margin-bottom: 25px;
         text-transform: uppercase;
 
+        @media (max-width: 1024px) {
+          font-size: 20px;
+        }
+
+
         .big {
           font-size: 31px;
+
+          @media (max-width: 1024px) {
+            font-size: 28px;
+          }
         }
       }
 
@@ -524,6 +669,10 @@ nav {
         font-size: 25px;
         color: $color_black;
         line-height: 115%;
+
+        @media (max-width: 1024px) {
+          font-size: 22px;
+        }
       }
     }
   }
@@ -532,6 +681,10 @@ nav {
 .footer-wrapper {
   padding: 15px 145px 35px 55px;
   background-color: #f1f1f1;
+
+  @media (max-width: 1024px) {
+    padding: 15px 30px 35px 30px;
+  }
 
   .footer-main {
     display: flex;
@@ -616,6 +769,10 @@ nav {
 
 .main-order-form-wrapper {
   margin-top: -45px;
+
+  @media (max-width: 1024px) {
+    min-width: 428px;
+  }
 }
 
 .main-order-form {
@@ -632,6 +789,10 @@ nav {
     min-height: 355px;
     min-width: 510px;
 
+    @media (max-width: 1024px) {
+      min-width: 0;
+    }
+
     .main-order-form-item {
       display: none;
 
@@ -644,6 +805,10 @@ nav {
         font-size: 28px;
         margin-bottom: 30px;
         color: #000000;
+
+        @media (max-width: 1024px) {
+          font-size: 24px;
+        }
       }
 
       &[data-item='2'] {
@@ -672,10 +837,17 @@ nav {
 
   .btn-wrapper {
     margin-top: 50px;
+    display: flex;
   }
 
   .btn {
     min-width: 225px;
+    width: 100%;
+    max-width: 240px;
+
+    @media (max-width: 1024px) {
+      min-width: 0;
+    }
 
     &.forward-link {
       &:focus, &:hover {
@@ -759,6 +931,10 @@ nav {
       margin-right: 20px;
       flex-shrink: 0;
       min-width: 95px;
+
+      @media (max-width: 1024px) {
+        font-size: 18px;
+      }
     }
 
     input{
@@ -780,6 +956,93 @@ nav {
       top: calc(100% + 5px);
       left: 115px;
     }
+  }
+
+  .main-order-form-cards-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .radio-wrapper {
+      background-color: #f1f1f1;
+      margin-right: 20px;
+
+      input {
+        position: absolute;
+        width: 0;
+        height: 0;
+        pointer-events: none;
+        opacity: 0;
+
+        &:checked + label {
+          border: 1px solid #a7a7a7;
+        }
+      }
+
+      label {
+        cursor: pointer;
+        border: 1px solid transparent;
+        @include background('../images/sprite-card.png', center, no-repeat, auto);
+        width: 110px;
+        height: 54px;
+        margin-bottom: 0;
+
+        &[for='visa'] {
+          background-position: -18px -124px;
+        }
+
+        &[for='mastercard'] {
+          background-position: -150px -124px;
+        }
+
+        span {
+          width: 0;
+          height: 0;
+          pointer-events: none;
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .main-order-form-select-wrapper {
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+
+    &:after {
+      content: "";
+      @include background('../images/ico_arrow-black.png', center, no-repeat, contain);
+      position: absolute;
+      right: 15px;
+      top: 18px;
+      z-index: 1;
+      width: 10px;
+      height: 11px;
+      pointer-events: none;
+      box-sizing: border-box;
+    }
+  }
+
+  .main-order-form-select {
+    width: 100%;
+    width: 100%;
+    height: 46px;
+    padding: 8px 10px;
+    border-color: #140e0b;
+    font-size: 16px;
+    font-family: $font_segoe-regular;
+    border-width: 2px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+
+
   }
 }
 
